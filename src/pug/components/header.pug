@@ -1,0 +1,13 @@
+include ../mixins/buttons.pug
+header.header
+	include ../components/header-nav.pug
+
+	.info-header 
+		h5.info-header__title Приведем клиентов <br> <span>и увеличим продажи</span>
+		p.info-header__text SDA Consulting - не просто консалтинговое агентство, а объединение практикующих экспертов, которые имеют многолетний опыт продвижения бизнеса.
+		.info-header__btn
+			+button('href', '#footer', 'Хочу больше клиентов')
+	
+	.header__background
+		video(autoplay, loop, preload="auto", muted, no-controls).header__video
+			source(src="./videos/header.mp4", type="video/mp4")

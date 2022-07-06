@@ -1,0 +1,83 @@
+.button
+	box-sizing: border-box
+	font-weight: 600
+	font-size: 16px
+	line-height: 22px
+	padding: 10px 22px
+	border: 1px solid rgba(255,255,255,.44)
+	position: relative
+	font-family: 'OpenSans'
+	color: var(--white-color)
+	text-decoration: none
+	display: inline-block
+	&::before
+		box-sizing: border-box
+		content: ''
+		display: block
+		width: 12px
+		height: 12px
+		border-top: 3px solid var(--white-color)
+		border-left: 3px solid var(--white-color)
+		position: absolute
+		top: 0
+		left: 0
+		transform: translate(-3px, -3px)
+		transition: 0.4s
+	&::after
+		box-sizing: border-box
+		content: ''
+		display: block
+		width: 12px
+		height: 12px
+		border-bottom: 3px solid var(--white-color)
+		border-left: 3px solid var(--white-color)
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: translate(-3px, 3px)
+		transition: 0.4s
+	& span
+		&::after
+			box-sizing: border-box
+			content: ''
+			display: block
+			width: 12px
+			height: 12px
+			border-top: 3px solid var(--white-color)
+			border-right: 3px solid var(--white-color)
+			position: absolute
+			top: 0
+			right: 0
+			transform: translate(3px, -3px)
+			transition: 0.4s
+		&::before
+			box-sizing: border-box
+			content: ''
+			display: block
+			width: 12px
+			height: 12px
+			border-bottom: 3px solid var(--white-color)
+			border-right: 3px solid var(--white-color)
+			position: absolute
+			bottom: 0
+			right: 0
+			transform: translate(3px, 3px)
+			transition: 0.4s
+	&:hover
+		&::before
+			width: 55%
+			height: 60%
+			transition: 0.4s
+		&::after
+			width: 55%
+			height: 60%
+			transition: 0.4s
+		& span
+			&::before
+				width: 55%
+				height: 60%
+				transition: 0.4s
+			&::after
+				width: 55%
+				height: 60%
+				transition: 0.4s
