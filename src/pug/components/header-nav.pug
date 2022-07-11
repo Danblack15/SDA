@@ -1,6 +1,6 @@
 include ../mixins/buttons.pug
 .header-nav
-    a(href="#")
+    a(href="#").header-nav__logo
         include ../../images/header/logo.svg
     nav.nav-items
         ul.nav-items__list 
@@ -12,5 +12,11 @@ include ../mixins/buttons.pug
                 a(href="#") О нас
             li.nav-items__item 
                 a(href="#") Контакты
-        +button('href', 'tel:89123224567', 'Заказать звонок')
-                
+        +button('href', 'tel: 89123224567', 'Заказать звонок')
+    .header-nav__mobile
+        a(href="tel: 89123224567").header-nav__call 
+            include ../../images/svg/phone.svg
+        button.header-nav__open-modal 
+            span 
+            span 
+            span 

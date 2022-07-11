@@ -1,5 +1,94 @@
 .cursor
-    width: 12px
-    height: 12px
-    background: var(--white-color)
+    box-sizing: border-box
     position: absolute
+    z-index: 999
+    pointer-events: none
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    width: 54px
+    height: 54px
+    &__box
+        width: 12px
+        height: 12px
+        background: var(--white-color)
+        position: absolute
+        top: 0
+        left: 0
+        transition: .4s
+    &__box--disabled
+        opacity: 0
+        width: 51px
+        height: 51px
+        transition: .4s
+    &__border
+        box-sizing: border-box
+        width: 0px
+        height: 0px
+        border: 1px solid rgba(255,255,255,.44)
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        opacity: 0
+        transition: .4s
+    &__border--active
+        width: 51px
+        height: 51px
+        transition: .4s
+        opacity: 1
+    &__arrow
+        transform: rotate(60deg)
+        width: 28px
+    &__top-left
+        box-sizing: border-box
+        display: block
+        width: 12px
+        height: 12px
+        border-top: 3px solid var(--white-color)
+        border-left: 3px solid var(--white-color)
+        position: absolute
+        top: 0
+        left: 0
+        transform: translate(-3px, -3px)
+        transition: 0.4s
+    &__bottom-left
+        box-sizing: border-box
+        display: block
+        width: 12px
+        height: 12px
+        border-bottom: 3px solid var(--white-color)
+        border-left: 3px solid var(--white-color)
+        position: absolute
+        bottom: 0
+        left: 0
+        transform: translate(-3px, 3px)
+        transition: 0.4s
+    &__top-right
+        box-sizing: border-box
+        display: block
+        width: 12px
+        height: 12px
+        border-top: 3px solid var(--white-color)
+        border-right: 3px solid var(--white-color)
+        position: absolute
+        top: 0
+        right: 0
+        transform: translate(3px, -3px)
+        transition: 0.4s
+    &__bottom-right
+        box-sizing: border-box
+        display: block
+        width: 12px
+        height: 12px
+        border-bottom: 3px solid var(--white-color)
+        border-right: 3px solid var(--white-color)
+        position: absolute
+        bottom: 0
+        right: 0
+        transform: translate(3px, 3px)
+        transition: 0.4s
+
+@media (max-width: 1280px)
+    .cursor
+        display: none
