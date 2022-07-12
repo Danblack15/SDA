@@ -1,0 +1,19 @@
+.services
+    padding: 60px max(50vw - 800px, 20px)
+    &__title
+        font-weight: 700
+        font-size: 40px
+        line-height: 46px
+        font-family: 'Ubuntu'
+        margin: 0
+    &__cards
+        display: flex
+        grid-column-gap: 18px
+        justify-content: space-between
+        margin-top: 32px
+
+@media (max-width: 1280px)
+    .services
+        &__cards
+            flex-direction: column
+            grid-row-gap: 20px

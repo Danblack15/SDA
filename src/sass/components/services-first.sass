@@ -1,0 +1,291 @@
+.services-item
+    flex: 1
+    height: 515px
+    background: var(--white-color)
+    box-sizing: border-box
+    border: 1px solid var(--silver-color)
+    position: relative
+    overflow: hidden
+
+    &__click-box
+        height: inherit
+        box-sizing: border-box
+        padding: 73px 0 50px 0
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__img
+        margin-left: 33px
+
+    &__title
+        max-width: 325px
+        margin-left: 40px
+        font-weight: 700
+        font-size: 24px
+        line-height: 140%
+        letter-spacing: 0.005em
+        color: var(--black-dop-color)
+        transition: .4s color
+
+    &__box-arrow
+        position: absolute
+        top: 20px
+        right: 20px
+        transition: .4s opacity
+
+    &__active-img
+        position: absolute
+        top: 56px
+
+    &__defaul-img
+        transition: .6s
+
+    &:hover
+        .services-item__box-arrow
+            opacity: 0
+        .services-item__title
+            color: var(--blue-dop-color)
+        .services-item__defaul-img
+            opacity: 0
+            transition: .4s
+        .first-img
+            opacity: 1
+            transition: .4s
+            & svg rect
+                transition: .4s
+                &:nth-child(1)
+                    transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 65.1943)
+                &:nth-child(2)
+                    transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 45.3956)
+                &:nth-child(3)
+                    transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 25.5972)
+                &:nth-child(4)
+                    transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 5.7986)
+                &:nth-child(5)
+                    transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, -15)
+
+        .second-img
+            opacity: 1
+            transition: .4s
+            & svg path
+                transition: .4s
+                &:nth-child(1)
+                    transform: translateY(0)
+                &:nth-child(3)
+                    transform: translateY(-0)
+                &:nth-child(4)
+                    transform: translateY(0)
+                &:nth-child(6)
+                    transform: translateY(0)
+                &:nth-child(7)
+                    transform: translateY(0)
+                &:nth-child(8)
+                    transform: translateY(0)
+                &:nth-child(2)
+                    transform: translateY(0)//shadow
+                &:nth-child(5)
+                    transform: translateY(0)//shadow
+
+        .third-img
+            opacity: 1
+            transition: .2s
+            & svg
+                height: 174px
+            & svg path
+                transition: .4s
+                &:nth-child(1)
+                    d: path("M38.32 78.96L0.720009 101.52L66.52 141L106 118.44L38.32 78.96Z")
+                &:nth-child(2)
+                    d: path("M106 39.4799L66.52 62.0397V141L106 118.44L106 39.4799Z")
+                &:nth-child(3)
+                    d: path("M38.3213 0L0.721302 22.56V101.52L38.3213 78.96V0Z")
+                &:nth-child(4)
+                    d: path("M38.32 0L0.720047 22.56L66.52 62.04L106 39.4801L38.32 0Z")
+
+.modal-service
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: linear-gradient(351.17deg, #030404 -142.02%, #1F48D7 104.37%)
+    color: var(--white-color)
+    box-sizing: border-box
+    padding: 42px 20px 41px 40px
+    font-family: 'OpenSans'
+    overflow: hidden
+    display: none
+    transform: translateY(100%)
+
+    & *
+        margin: 0
+        padding: 0
+
+    & ul
+        list-style: none
+
+    &__list
+        overflow: auto
+        height: 100%
+        box-sizing: border-box
+        padding-right: 30px
+        &::-webkit-scrollbar
+            width: 2px
+            display: block
+            background: rgba(255, 255, 255, 0.5)
+
+        &::-webkit-scrollbar-thumb
+            width: 100%
+            background: var(--white-color)
+
+    &__close
+        position: absolute
+        top: 12px
+        right: 12px
+        & path
+            fill: white
+
+    &__title
+        font-weight: 700
+        font-size: 20px
+        line-height: 180%
+        & p
+            display: inline
+            & svg
+                margin-left: 10px
+
+    &__dop-list
+        font-weight: 400
+        font-size: 17px
+        line-height: 140%
+        letter-spacing: -0.02em
+        color: var(--dop-gray-color)
+        overflow: hidden
+        max-height: 0
+        transition: max-height .2s ease
+
+        & li
+            display: flex
+            &::before
+                content: '—'
+                display: block
+                margin-right: 5px
+
+    &--opened
+        display: block
+        animation-name: modal-service--opened
+        animation-duration: .4s
+        animation-fill-mode: forwards
+        transform: translateY(100%)
+
+    &--closed
+        display: block
+        animation-name: modal-service--closet
+        animation-duration: .4s
+        animation-fill-mode: forwards
+        transform: translateY(0)
+
+.active-arrow
+    animation-name: active-arrow
+    animation-duration: .4s
+    animation-fill-mode: forwards
+
+.not-active-arrow
+    animation-name: not-active-arrow
+    animation-duration: .4s
+    animation-fill-mode: forwards
+    transform: rotate(-90deg)
+
+//SVG
+.first-img
+    opacity: 0
+    transition: .4s
+    & svg
+        height: 175px
+    & svg rect
+        transition: .4s
+        &:nth-child(1)
+            transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 51.1943)
+        &:nth-child(2)
+            transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 38.3956)
+        &:nth-child(3)
+            transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 25.5972)
+        &:nth-child(4)
+            transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 12.7986)
+        &:nth-child(5)
+            transform: matrix(0.866025, 0.5, -0.866025, 0.5, 55.4194, 0)
+
+.second-img
+    opacity: 0
+    transition: .4s
+    & svg path
+        transition: .4s
+        &:nth-child(1)
+            transform: translateY(-12px)
+        &:nth-child(2)
+            transform: translateY(-10px)//shadow
+        &:nth-child(3)
+            transform: translateY(-12px)
+        &:nth-child(4)
+            transform: translateY(3px)
+        &:nth-child(5)
+            transform: translateY(5px)//shadow
+        &:nth-child(6)
+            transform: translateY(4px)
+        &:nth-child(7)
+            transform: translateY(17px)
+        &:nth-child(8)
+            transform: translateY(17px)
+
+.third-img
+    opacity: 0
+    transition: .4s
+    & svg
+        height: 174px
+    & svg path
+        transition: .4s
+        &:nth-child(1)
+            d: path("M 31.9963 67.1925 L -0.000167847 86.3904 L 55.9936 119.987 L 89.5898 100.789 L 31.9963 67.1925 Z")
+        &:nth-child(2)
+            d: path("M 89.5898 33.5961 L 55.9936 52.7938 V 119.986 L 89.5898 100.789 L 89.5898 33.5961 Z")
+        &:nth-child(3)
+            d: path("M 31.9978 0 L 0.00137711 19.1979 V 86.3904 L 31.9978 67.1925 V 0 Z")
+        &:nth-child(4)
+            d: path("M 31.9963 0 L -0.000137329 19.1979 L 55.9936 52.7941 L 89.5898 33.5963 L 31.9963 0 Z")
+
+@keyframes not-active-arrow
+    100%
+        transform: rotate(0)
+
+@keyframes active-arrow
+    100%
+        transform: rotate(-90deg)
+
+@keyframes modal-service--opened
+    100%
+        transform: translateY(0)
+
+@keyframes modal-service--closet
+    100%
+        transform: translateY(100%)
+
+@media (max-width: 1280px)
+    .services-item
+        height: 400px
+        flex: none
+        padding: 0px 15px 35px 0
+
+        &__title
+            max-width: 100%
+            font-size: 28px
+
+@media (max-width: 780px)
+    .services-item
+        &__title
+            font-size: 20px
+
+    .modal-service
+        &__dop-list
+            font-size: 18px
+            line-height: 150%

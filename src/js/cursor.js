@@ -9,7 +9,7 @@ if (cursor) {
 
 		if (!target) return
 
-		if (target.closest('a')) {
+		if (target.closest('a') || target.closest('.cursor-on')) {
 			cursor.classList.add('cursor--active')
 			border.classList.add('cursor__border--active')
 			box.classList.add('cursor__box--disabled')
@@ -19,7 +19,14 @@ if (cursor) {
 			box.classList.remove('cursor__box--disabled')
 		}
 
-		cursor.style.left = e.pageX + 'px'
-		cursor.style.top = e.pageY + 'px'
+		//БЕЛЫЙ ФОН
+		if (target.closest('.white-back') && !target.closest('.dark-back')){
+			cursor.classList.add('cursor--dark')
+		} else {
+			cursor.classList.remove('cursor--dark')
+		}
+
+		cursor.style.left = e.clientX + 'px'
+		cursor.style.top = e.clientY  + 'px'
 	})
 }

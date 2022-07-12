@@ -1,6 +1,6 @@
 .cursor
     box-sizing: border-box
-    position: absolute
+    position: fixed
     z-index: 999
     pointer-events: none
     display: flex
@@ -8,9 +8,10 @@
     align-items: flex-start
     width: 54px
     height: 54px
+    user-select: none
     &__box
-        width: 12px
-        height: 12px
+        width: 5px
+        height: 5px
         background: var(--white-color)
         position: absolute
         top: 0
@@ -40,6 +41,9 @@
     &__arrow
         transform: rotate(60deg)
         width: 28px
+        &--dark
+            display: none
+
     &__top-left
         box-sizing: border-box
         display: block
@@ -92,3 +96,49 @@
 @media (max-width: 1280px)
     .cursor
         display: none
+
+.cursor--dark
+    .cursor__box
+        background: linear-gradient(353.09deg, #030404 -45.63%, #1F48D7 133.65%)
+
+    .cursor__border
+        border-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -moz-border-image: -moz-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -webkit-border-image: -webkit-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        border-image-slice: 1
+
+    .cursor__top-left
+        border-top: 3px solid transparent
+        border-left: 3px solid transparent
+        border-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -moz-border-image: -moz-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -webkit-border-image: -webkit-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        border-image-slice: 1
+    .cursor__bottom-left
+        border-bottom: 3px solid transparent
+        border-left: 3px solid transparent
+        border-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -moz-border-image: -moz-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -webkit-border-image: -webkit-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        border-image-slice: 1
+    .cursor__top-right
+        border-top: 3px solid transparent
+        border-right: 3px solid transparent
+        border-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -moz-border-image: -moz-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -webkit-border-image: -webkit-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        border-image-slice: 1
+    .cursor__bottom-right
+        border-bottom: 3px solid transparent
+        border-right: 3px solid transparent
+        border-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -moz-border-image: -moz-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        -webkit-border-image: -webkit-linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+        border-image-slice: 1
+
+    .cursor__arrow--white
+        display: none
+
+    .cursor__arrow--dark
+        display: block
+        transform: rotate(0)
