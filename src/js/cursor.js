@@ -2,31 +2,33 @@ let cursor = document.querySelector('.cursor')
 
 if (cursor) {
 	window.addEventListener('mousemove', e => {
-		const target = e.target
+		if (window.innerWidth > 1280) {
+			const target = e.target
+			console.log('2')
+			let border = document.querySelector('.cursor__border')
+			let box = document.querySelector('.cursor__box')
 
-		let border = document.querySelector('.cursor__border')
-		let box = document.querySelector('.cursor__box')
+			if (!target) return
 
-		if (!target) return
+			if (target.closest('a') || target.closest('.cursor-on')) {
+				cursor.classList.add('cursor--active')
+				border.classList.add('cursor__border--active')
+				box.classList.add('cursor__box--disabled')
+			} else {
+				cursor.classList.remove('cursor--active')
+				border.classList.remove('cursor__border--active')
+				box.classList.remove('cursor__box--disabled')
+			}
 
-		if (target.closest('a') || target.closest('.cursor-on')) {
-			cursor.classList.add('cursor--active')
-			border.classList.add('cursor__border--active')
-			box.classList.add('cursor__box--disabled')
-		} else {
-			cursor.classList.remove('cursor--active')
-			border.classList.remove('cursor__border--active')
-			box.classList.remove('cursor__box--disabled')
+			//БЕЛЫЙ ФОН
+			if (target.closest('.white-back') && !target.closest('.dark-back')) {
+				cursor.classList.add('cursor--dark')
+			} else {
+				cursor.classList.remove('cursor--dark')
+			}
+
+			cursor.style.left = e.clientX + 'px'
+			cursor.style.top = e.clientY + 'px'
 		}
-
-		//БЕЛЫЙ ФОН
-		if (target.closest('.white-back') && !target.closest('.dark-back')){
-			cursor.classList.add('cursor--dark')
-		} else {
-			cursor.classList.remove('cursor--dark')
-		}
-
-		cursor.style.left = e.clientX + 'px'
-		cursor.style.top = e.clientY  + 'px'
 	})
 }

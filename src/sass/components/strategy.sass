@@ -1,0 +1,239 @@
+.strategy
+	padding: 60px max(50vw - 800px, 20px)
+	display: flex
+	justify-content: space-between
+
+	& *
+		padding: 0
+		margin: 0
+
+	&__info
+		width: 455px
+		position: relative
+
+	&__info-item
+		display: none
+		position: absolute
+		&--active
+			display: block
+			animation-name: active-tab
+			animation-duration: .4s
+			animation-fill-mode: forwards
+			transform: translateX(-25%)
+			opacity: 0
+
+	&__title
+		font-family: 'Ubuntu'
+		display: inline-flex
+		font-weight: 700
+		font-size: 60px
+		line-height: 69px
+		color: transparent
+		background-clip: text
+		-webkit-background-clip: text
+		background-image: linear-gradient(282.48deg, #9A1AE8 -17.33%, #1F48D7 95.12%)
+		padding-bottom: 8px
+		margin-bottom: 20px
+		border-bottom: 2px dashed #1F48D7
+		align-items: center
+
+	&__arrow
+		display: none
+		transform: rotate(0deg) translateY(-25%)
+		transition: .4s
+		&--active
+			transform: rotate(-90deg) translateX(25%)
+			transition: .4s
+
+	&__text
+		font-family: 'OpenSans'
+		font-style: normal
+		font-weight: 400
+		font-size: 17px
+		line-height: 150%
+		letter-spacing: 0.005em
+
+		&--blue
+			font-weight: 600
+			color: transparent
+			background-clip: text
+			-webkit-background-clip: text
+			background-image: linear-gradient(var(--blue-dop2-color), var(--blue-dark-color))
+
+		&--bold
+			font-weight: 600
+			margin: 20px 0 14px 0
+
+	&__dop
+		font-family: 'Ubuntu'
+		font-weight: 700
+		font-size: 36px
+		line-height: 41px
+		margin: 24px 0 3px 0
+		color: transparent
+		background-clip: text
+		-webkit-background-clip: text
+		background-image: linear-gradient(318.08deg, #030404 -167.83%, #1F48D7 108.08%)
+
+	&__sign
+		font-weight: 400
+		font-size: 16px
+		line-height: 140%
+		letter-spacing: 0.005em
+		color: var(--dop-silver-color)
+
+	&__letters
+		display: flex
+		margin-left: 115px
+		min-width: 1000px
+
+	&__letter
+		position: absolute
+		transition: .4s
+
+		&--active
+			transform: scale(1.2) translateY(-20px)
+
+		&--s
+			margin-top: -10px
+
+		&--d
+			margin-left: 320px
+
+		&--a
+			margin-left: 580px
+
+		&:hover
+			transform: scale(1.2) translateY(-20px)
+			transition: .4s
+
+@keyframes active-tab
+	50%
+		transform: translateX(0)
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+.close-arrow
+	transform: rotate(0) translateY(-25%)
+	transition: .4s
+
+@media (max-width: 1400px)
+	.strategy
+		flex-direction: column-reverse
+
+		&__info
+			width: auto
+			margin-top: 250px
+
+		&__title-wrapper
+			display: flex
+			align-items: center
+			cursor: pointer
+		&__arrow
+			display: block
+			margin-left: 20px
+
+		&__text
+			font-size: 22px
+			line-height: 150%
+			&--bold
+				font-size: 22px
+				line-height: 150%
+
+		&__info-item
+			position: relative
+
+		&__letters
+			margin: 0
+			justify-content: center
+			min-width: 100%
+
+		&__letter
+			& img
+				width: 250px
+
+			&--s
+				margin-top: 0
+				margin-left: -350px
+
+			&--d
+				margin-left: 20px
+
+			&--a
+				margin-left: 380px
+				margin-top: 0px
+
+				& img
+					width: 300px
+
+			&--active
+				transform: scale(1.2) translateY(-10px)
+
+			&:hover
+				transform: scale(1.2) translateY(-10px)
+
+		&__popup
+			overflow: hidden
+			position: absolute
+			top: 77px
+			max-width: 672px
+			max-height: 0
+			background: var(--dop2-silver-color)
+			transition: .2s
+			&--opened
+				max-height: 700px
+				transition: .5s
+
+		&__popup-wrapper
+			box-sizing: border-box
+			padding: 40px 43px 36px 34px
+
+@media (max-width: 780px)
+	.strategy
+
+		&__title
+			font-size: 40px
+			line-height: 46px
+
+		&__arrow
+			margin-left: 12px
+			& svg
+				width: 26px
+
+		&__info
+			margin-top: 150px
+
+		&__text
+			font-size: 20px
+			&--bold
+				font-size: 20px
+
+		&__letter
+			& img
+				width: 130px
+
+			&--s
+				margin-left: -230px
+
+			&--d
+				margin-left: -30px
+
+			&--a
+				margin-left: 160px
+				margin-top: 0px
+
+				& img
+					width: 160px
+
+			&--active
+				transform: scale(1.2) translateY(-5px)
+
+			&:hover
+				transform: scale(1.2) translateY(-5px)
+
+		&__popup
+			top: 56px
+
+		&__popup-wrapper
+			padding: 40px 12px 29px 20px
