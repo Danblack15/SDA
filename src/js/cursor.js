@@ -4,13 +4,13 @@ if (cursor) {
 	window.addEventListener('mousemove', e => {
 		if (window.innerWidth > 1280) {
 			const target = e.target
-			console.log('2')
+
 			let border = document.querySelector('.cursor__border')
 			let box = document.querySelector('.cursor__box')
 
 			if (!target) return
 
-			if (target.closest('a') || target.closest('.cursor-on')) {
+			if (target.closest('a') || target.closest('.cursor-on') || target.closest('.swiper-pagination-bullet')) {
 				cursor.classList.add('cursor--active')
 				border.classList.add('cursor__border--active')
 				box.classList.add('cursor__box--disabled')

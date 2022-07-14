@@ -1,0 +1,159 @@
+.cases-slider
+	width: 100%
+	overflow: hidden
+.cases-swiper
+	position: relative
+	overflow: unset !important
+.cases-wrapper
+	display: flex
+	position: relative
+	width: 100%
+	height: 100%
+	&__slide
+		width: max-content
+		height: 706px
+		display: block
+		overflow: hidden
+		& a
+			height: inherit
+		&:hover
+			.cases-wrapper__info
+				transform: translateY(0)
+			.cases-wrapper__info-title
+				opacity: 1
+			.cases-wrapper__info-text
+				opacity: 1
+
+	&__info
+		position: absolute
+		background: linear-gradient(351.17deg, var(--black-dop1-color) -142.02%, var(--blue-dop2-color) 104.37%)
+		box-sizing: border-box
+		padding: 40px 30px 10px 40px
+		top: 0
+		height: 100%
+		transform: translateY(100%)
+		transition: .4s transform
+
+	&__info-wrapper
+		overflow: auto
+		height: 100%
+		&::-webkit-scrollbar
+			width: 2px
+			display: block
+			background: rgba(255, 255, 255, 0.5)
+
+		&::-webkit-scrollbar-thumb
+			width: 100%
+			background: var(--white-color)
+
+	&__info-title
+		font-family: 'OpenSans'
+		font-weight: 700
+		font-size: 20px
+		line-height: 180%
+		letter-spacing: 0.005em
+		opacity: 0
+		transition: .4s opacity
+
+	&__info-text
+		font-family: 'OpenSans'
+		font-weight: 400
+		font-size: 18px
+		line-height: 150%
+		letter-spacing: 0.005em
+		margin-top: 24px
+		opacity: 0
+		transition: .4s opacity
+		padding-right: 50px
+
+.cases-swiper-nav
+	margin-top: 40px
+	width: 100%
+	display: flex
+	justify-content: flex-end
+	box-sizing: border-box
+	padding-right: 162px
+
+	&__prev
+		overflow: hidden
+		& svg
+			transform: rotate(-180deg) translateX(-55%)
+			opacity: .5
+			transition: .3s
+
+		&:hover svg
+			transform: rotate(-180deg) translateX(0)
+			opacity: 1
+			transition: .3s
+
+	&__next
+		overflow: hidden
+		& svg
+			transform: translateX(-55%)
+			opacity: .5
+			transition: .3s
+
+		&:hover svg
+			transform: translateX(0)
+			opacity: 1
+			transition: .3s
+
+	&__pagination
+		position: relative
+		display: flex
+		grid-column-gap: 6px
+		align-items: center
+		transition: .3s
+		min-width: 95px
+		max-width: 95px
+		margin: 0 23px
+		.swiper-pagination-bullet
+			min-width: 7.25px
+			height: 7.25px
+			box-sizing: border-box
+			border-radius: 0
+			opacity: 1
+			transform: scale(1)
+			border: 1.375px solid var(--white-color)
+			position: relative
+			transition: .3s
+			background: none
+		.swiper-pagination-bullet-active
+			background: var(--white-color)
+			min-width: 11px
+			height: 11px
+			transition: .3s
+
+@media (max-width: 1280px)
+	.cases-wrapper
+		&__info-title
+			font-size: 24px
+			line-height: 140%
+		&__info-text
+			font-size: 22px
+			line-height: 160%
+	.cases-swiper-nav
+		padding-right: 30px
+
+@media (max-width: 780px)
+	.cases-wrapper
+		&__slide
+			height: 435px
+		&__info-title
+			font-size: 20px
+			line-height: 140%
+		&__info-text
+			font-size: 18px
+			line-height: 140%
+	.cases-swiper-nav
+		padding-right: 0
+		justify-content: center
+		&__prev
+			& svg
+				transform: rotate(-180deg) translateX(-35%)
+
+		&__next
+			& svg
+				transform: translateX(-55%)
+			&:hover svg
+				transform: translateX(-40%)
