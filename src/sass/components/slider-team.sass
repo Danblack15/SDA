@@ -1,0 +1,62 @@
+.team-slider-item
+    background-image: url('/images/team-slider/slider-back.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+
+.team-slider
+    width: 100%
+    overflow: hidden
+
+.team-wrapper
+    &__slide
+        width: max-content
+        height: 706px
+        display: block
+        overflow: hidden
+        & a
+            height: inherit
+        &:hover
+            .cases-wrapper__info
+                transform: translateY(0)
+            .cases-wrapper__info-title
+                opacity: 1
+            .cases-wrapper__info-text
+                opacity: 1
+
+    &__site
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        & p
+            margin: 0
+            padding: 0
+
+    &__site-btn a
+        padding: 3px 5px
+        font-weight: 400
+
+.team-swiper-nav
+    &__prev
+        & path
+            fill: var(--blue-dop2-color)
+
+    &__next
+        & path
+            fill: var(--blue-dop2-color)
+
+    &__pagination
+        .swiper-pagination-bullet
+            border: 1.375px solid var(--blue-dop2-color)
+        .swiper-pagination-bullet-active
+            background: var(--blue-dop2-color)
+
+@media (max-width: 780px)
+    .team-wrapper
+        &__slide
+            height: 435px
+
+        &__site
+            flex-direction: column
+            align-items: flex-start

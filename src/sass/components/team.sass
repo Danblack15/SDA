@@ -1,0 +1,37 @@
+.team
+	background: var(--white-color)
+
+	&__title
+		color: var(--black-dop2-color)
+
+	&__info
+		color: var(--dop1-gray-color)
+		display: flex
+		flex-direction: column
+		grid-row-gap: 20px
+		font-weight: 400
+		font-size: 24px
+		line-height: 140%
+		letter-spacing: 0.005em
+		margin-top: 50px
+
+	&__wrapper
+		align-items: flex-start
+
+@media (max-width: 1280px)
+	.team
+		height: 1100px
+		&__info
+			margin-bottom: 42px
+			margin-top: 0
+			padding-right: 20px
+
+			& p:nth-child(2)
+				display: none
+
+@media (max-width: 780px)
+	.team
+		height: auto
+		&__info
+			font-size: 20px
+			line-height: 140%

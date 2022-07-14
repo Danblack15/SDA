@@ -4,3 +4,4 @@ import './modal-menu';
 import './services';
 import './letters';
 import './cases-slider';
+import './team-slider';
