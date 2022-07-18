@@ -16,12 +16,12 @@
         position: absolute
         top: 0
         left: 0
-        transition: .4s
+        transition: .6s
     &__box--disabled
         opacity: 0
         width: 51px
         height: 51px
-        transition: .4s
+        transition: .6s
     &__border
         box-sizing: border-box
         width: 0px
@@ -32,12 +32,14 @@
         align-items: center
         position: relative
         opacity: 0
-        transition: .4s
+        transition: .6s
     &__border--active
         width: 51px
         height: 51px
-        transition: .4s
+        transition: .6s
         opacity: 1
+        .wrapper-arrows
+            opacity: 1
     &__arrow
         transform: rotate(60deg)
         width: 28px
@@ -55,7 +57,7 @@
         top: 0
         left: 0
         transform: translate(-3px, -3px)
-        transition: 0.4s
+        transition: 0.6s
     &__bottom-left
         box-sizing: border-box
         display: block
@@ -67,7 +69,7 @@
         bottom: 0
         left: 0
         transform: translate(-3px, 3px)
-        transition: 0.4s
+        transition: 0.6s
     &__top-right
         box-sizing: border-box
         display: block
@@ -79,7 +81,7 @@
         top: 0
         right: 0
         transform: translate(3px, -3px)
-        transition: 0.4s
+        transition: 0.6s
     &__bottom-right
         box-sizing: border-box
         display: block
@@ -91,7 +93,17 @@
         bottom: 0
         right: 0
         transform: translate(3px, 3px)
-        transition: 0.4s
+        transition: 0.6s
+
+.wrapper-arrows
+    width: 90%
+    height: 90%
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    opacity: 0
+    transition: opacity .4s
 
 @media (max-width: 1280px)
     .cursor

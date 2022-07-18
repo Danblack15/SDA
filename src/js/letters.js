@@ -7,7 +7,7 @@ window.wow = new WOW({
 
 window.wow.init()
 
-let timeLetter = setInterval(interval, 4000)
+let timeLetter = setInterval(interval, 5000)
 
 function interval() {
 	let activeLet = document.querySelector('.strategy__letter--active'),
@@ -19,15 +19,15 @@ function interval() {
 		'a': 2
 	}
 
-	let nowInex = letters[activeData]
+	let nowIndex = letters[activeData]
 
 	deleteAllActiveLetters()
 
 	deleteAllActiveInfo()
 
-	if (!(nowInex > 1)) {
-		let nextLet = document.querySelectorAll('.strategy__letter')[nowInex + 1],
-			nextInfo = document.querySelectorAll('.strategy__info-item')[nowInex + 1]
+	if (!(nowIndex > 1)) {
+		let nextLet = document.querySelectorAll('.strategy__letter')[nowIndex + 1],
+			nextInfo = document.querySelectorAll('.strategy__info-item')[nowIndex + 1]
 
 		nextLet.classList.add('strategy__letter--active')
 		nextInfo.classList.add('strategy__info-item--active')
@@ -59,7 +59,7 @@ letters?.forEach((letter) => {
 
 		clearInterval(timeLetter)
 
-		timeLetter = setInterval(interval, 4000)
+		timeLetter = setInterval(interval, 5000)
 	})
 })
 

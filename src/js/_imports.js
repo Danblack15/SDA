@@ -5,3 +5,5 @@ import './services';
 import './letters';
 import './cases-slider';
 import './team-slider';
+import './navigation';
+import './accordeon';

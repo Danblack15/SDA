@@ -35,6 +35,7 @@
 
     &__site-btn a
         padding: 3px 5px
+        margin-left: 5px
         font-weight: 400
 
 .team-swiper-nav
@@ -51,6 +52,16 @@
             border: 1.375px solid var(--blue-dop2-color)
         .swiper-pagination-bullet-active
             background: var(--blue-dop2-color)
+
+@media (max-width: 1280px)
+    .team-wrapper
+        &:hover
+            .cases-wrapper__info
+                transform: translateY(100%)
+            .cases-wrapper__info-title
+                opacity: 1
+            .cases-wrapper__info-text
+                opacity: 1
 
 @media (max-width: 780px)
     .team-wrapper

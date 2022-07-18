@@ -9,15 +9,15 @@
                 include ../../images/svg/services-third-active.svg
         .services-item__title Юридическое консультирование
 
-    .modal-service.dark-back
+    .modal-service.dark-back.blue-popup
         a.modal-service__close
             include ../../images/svg/close-menu.svg
-        ul.modal-service__list
+        ul(data-simplebar).modal-service__list.accordeon-wrapper
             li 
-                a.modal-service__title
+                a.modal-service__title.accordeon-clickBox
                     p Аудит
                         include ../../images/svg/small-arrow.svg
-                ul.modal-service__dop-list
+                ul.modal-service__dop-list.accordeon-dopList
                     li налоговый аудит
                     li обязательный/инициативный аудит по РСБУ/МСФО
                     li составление консолидированной отчетности
@@ -26,10 +26,10 @@
                     li консультации по бухгалтерскому и налоговому учету
 
             li 
-                a.modal-service__title
+                a.modal-service__title.accordeon-clickBox
                     p Налоги
                         include ../../images/svg/small-arrow.svg
-                ul.modal-service__dop-list
+                ul.modal-service__dop-list.accordeon-dopList
                     li налоговый аудит
                     li обязательный/инициативный аудит по РСБУ/МСФО
                     li составление консолидированной отчетности
@@ -38,10 +38,10 @@
                     li консультации по бухгалтерскому и налоговому учету
 
             li 
-                a.modal-service__title
+                a.modal-service__title.accordeon-clickBox
                     p Оценка
                         include ../../images/svg/small-arrow.svg
-                ul.modal-service__dop-list
+                ul.modal-service__dop-list.accordeon-dopList
                     li налоговый аудит
                     li обязательный/инициативный аудит по РСБУ/МСФО
                     li составление консолидированной отчетности
@@ -54,10 +54,10 @@
                     li консультации по бухгалтерскому и налоговому учету
 
             li 
-                a.modal-service__title
+                a.modal-service__title.accordeon-clickBox
                     p Экспертиза в сфере энергетики и коммунальных услуг
                         include ../../images/svg/small-arrow.svg
-                ul.modal-service__dop-list
+                ul.modal-service__dop-list.accordeon-dopList
                     li налоговый аудит
                     li обязательный/инициативный аудит по РСБУ/МСФО
                     li составление консолидированной отчетности

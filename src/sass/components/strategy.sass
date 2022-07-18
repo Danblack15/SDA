@@ -2,7 +2,7 @@
 	padding: 60px max(50vw - 800px, 20px)
 	display: flex
 	justify-content: space-between
-	min-height: 505px
+	min-height: 545px
 
 	& *
 		padding: 0
@@ -18,7 +18,7 @@
 		&--active
 			display: block
 			animation-name: active-tab
-			animation-duration: .4s
+			animation-duration: 1.2s
 			animation-fill-mode: forwards
 			transform: translateX(-25%)
 			opacity: 0
@@ -41,10 +41,10 @@
 	&__arrow
 		display: none
 		transform: rotate(0deg) translateY(-25%)
-		transition: .4s
+		transition: .6s
 		&--active
 			transform: rotate(-90deg) translateX(25%)
-			transition: .4s
+			transition: .6s
 
 	&__text
 		font-family: 'OpenSans'
@@ -53,6 +53,8 @@
 		font-size: 17px
 		line-height: 150%
 		letter-spacing: 0.005em
+		box-sizing: border-box
+		background: var(--white-color)
 
 		&--blue
 			font-weight: 600
@@ -64,6 +66,40 @@
 		&--bold
 			font-weight: 600
 			margin: 20px 0 14px 0
+
+	&__popup-wrapper
+		list-style: none
+
+	&__text-title
+		display: inline-flex
+		align-content: flex-start
+		cursor: pointer
+
+		& p
+			transition: opacity .3s
+
+		&:hover
+			& p
+				opacity: .6
+
+	&__text-dop
+		box-sizing: border-box
+		padding-left: 24px
+		max-height: 0
+		overflow: hidden
+		padding-top: 5px
+		transition: .6s
+
+	&__text-arrow
+		& svg
+			min-width: 14px
+			max-width: 14px
+			height: 25px
+			margin-right: 10px
+			transform: rotate(180deg)
+			transition: .6s transform
+		&--active svg
+			transform: rotate(270deg)
 
 	&__dop
 		font-family: 'Ubuntu'
@@ -90,7 +126,12 @@
 
 	&__letter
 		position: absolute
-		transition: .4s
+		transition: .7s
+		height: 360px
+		cursor: pointer
+
+		& img
+			max-height: 100%
 
 		&--active
 			transform: scale(1.2) translateY(-20px)
@@ -99,14 +140,29 @@
 			margin-top: -10px
 
 		&--d
-			margin-left: 320px
+			margin-left: 280px
 
 		&--a
 			margin-left: 580px
 
 		&:hover
 			transform: scale(1.2) translateY(-20px)
-			transition: .4s
+			transition: .7s
+
+	&__shadow
+		position: absolute
+		bottom: 0
+		left: 0
+		z-index: -1
+		&--s
+			bottom: -18px
+			left: -65px
+		&--d
+			bottom: -23px
+			left: -120px
+		&--a
+			bottom: -40px
+			left: -130px
 
 @keyframes active-tab
 	50%
@@ -117,7 +173,7 @@
 
 .close-arrow
 	transform: rotate(0) translateY(-25%)
-	transition: .4s
+	transition: .6s
 
 @media (max-width: 1400px)
 	.strategy
@@ -132,6 +188,7 @@
 			display: flex
 			align-items: center
 			cursor: pointer
+
 		&__arrow
 			display: block
 			margin-left: 20px
@@ -139,12 +196,15 @@
 		&__text
 			font-size: 22px
 			line-height: 150%
+			background: none
+
 			&--bold
 				font-size: 22px
 				line-height: 150%
 
 		&__info-item
 			position: relative
+			z-index: 99
 
 		&__letters
 			margin: 0
@@ -152,28 +212,34 @@
 			min-width: 100%
 
 		&__letter
-			& img
-				width: 250px
-
+			height: 235px
 			&--s
-				margin-top: 0
+				margin-top: 0px
 				margin-left: -350px
 
 			&--d
-				margin-left: 20px
+				margin-left: 50px
 
 			&--a
 				margin-left: 380px
 				margin-top: 0px
 
-				& img
-					width: 300px
-
 			&--active
-				transform: scale(1.2) translateY(-10px)
+				transform: scale(1.2) translateY(-20px)
 
 			&:hover
-				transform: scale(1.2) translateY(-10px)
+				transform: scale(1.2) translateY(-20px)
+
+		&__shadow
+			&--s
+				bottom: -18px
+				left: -75px
+			&--d
+				bottom: -23px
+				left: -150px
+			&--a
+				bottom: -40px
+				left: -200px
 
 		&__popup
 			overflow: hidden
@@ -182,14 +248,15 @@
 			max-width: 672px
 			max-height: 0
 			background: var(--dop2-silver-color)
-			transition: .2s
+			z-index: 99
+			transition: .6s
 			&--opened
-				max-height: 700px
-				transition: .5s
+				max-height: 1200px
+				transition: .9s
 
 		&__popup-wrapper
 			box-sizing: border-box
-			padding: 40px 43px 36px 34px
+			padding: 40px 43px 36px 34px !important
 
 @media (max-width: 780px)
 	.strategy
@@ -213,27 +280,21 @@
 				font-size: 20px
 
 		&__letter
-			& img
-				width: 130px
-
+			height: 120px
 			&--s
-				margin-left: -230px
+				margin-left: -200px
 
 			&--d
-				margin-left: -30px
+				margin-left: 0px
 
 			&--a
-				margin-left: 160px
-				margin-top: 0px
-
-				& img
-					width: 160px
+				margin-left: 190px
 
 			&--active
-				transform: scale(1.2) translateY(-5px)
+				transform: scale(1.2) translateY(-10px)
 
 			&:hover
-				transform: scale(1.2) translateY(-5px)
+				transform: scale(1.2) translateY(-10px)
 
 		&__popup
 			top: 56px

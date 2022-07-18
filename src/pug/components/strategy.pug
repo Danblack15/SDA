@@ -15,11 +15,42 @@ section.strategy.white-back
                 h2.strategy__title Delegating
                 .strategy__arrow
                     include ../../images/svg/blue-arrow.svg
-            .strategy__popup
-                .strategy__popup-wrapper
+            .strategy__popup 
+
+                ul.strategy__popup-wrapper.accordeon-wrapper
                     p.strategy__text Поможем развиваться. Каждый из экспертов SDA Consulting управляет компанией, которые успешно реализуют проекты во всех сферах бизнеса.
-                    p.strategy__text.strategy__text--bold У нас имеются ресурсы и специалисты для решения любых бизнес-задач: 
-                    p.strategy__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero saepe harum, officia neque quasi aliquam cumque molestias blanditiis cupiditate dignissimos ex veritatis excepturi odio, quae temporibus eius explicabo similique. Est?
+                    p.strategy__text.strategy__text--bold У нас имеются ресурсы и специалисты для решения любых бизнес-задач:
+
+                    li.strategy__text 
+                        a.strategy__text-title.accordeon-clickBox
+                            .strategy__text-arrow
+                                include ../../images/svg/blue-arrow.svg
+                            p Собственный штат специалистов по интернет-маркетингу и продажам
+                        p.strategy__text-dop.accordeon-dopList Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum officiis incidunt voluptate consequuntur maiores dolorem voluptates
+                    li.strategy__text 
+                        a.strategy__text-title.accordeon-clickBox
+                            .strategy__text-arrow
+                                include ../../images/svg/blue-arrow.svg
+                            p Команда web-разработчиков (20 специалистов)
+                        p.strategy__text-dop.accordeon-dopList Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum officiis incidunt voluptate consequuntur maiores dolorem voluptates
+                    li.strategy__text 
+                        a.strategy__text-title.accordeon-clickBox
+                            .strategy__text-arrow
+                                include ../../images/svg/blue-arrow.svg
+                            p Дизайнеры
+                        p.strategy__text-dop.accordeon-dopList Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum officiis incidunt voluptate consequuntur maiores dolorem voluptates
+                    li.strategy__text 
+                        a.strategy__text-title.accordeon-clickBox
+                            .strategy__text-arrow
+                                include ../../images/svg/blue-arrow.svg
+                            p Специалисты по работе с персоналом
+                        p.strategy__text-dop.accordeon-dopList Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum officiis incidunt voluptate consequuntur maiores dolorem voluptates
+                    li.strategy__text 
+                        a.strategy__text-title.accordeon-clickBox
+                            .strategy__text-arrow
+                                include ../../images/svg/blue-arrow.svg
+                            p Аудиторы по финансовым и юридическим вопросам
+                        p.strategy__text-dop.accordeon-dopList Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nostrum officiis incidunt voluptate consequuntur maiores dolorem voluptates
 
         div(data-let="a").strategy__info-item
             .strategy__title-wrapper
@@ -34,10 +65,13 @@ section.strategy.white-back
 
     .strategy__letters
         div(data-let="s").strategy__letter.strategy__letter--s.cursor-on.dark-back.strategy__letter--active
-            img(src="../../images/letters/s.png" alt="S" data-wow-offset="150" data-wow-duration="0.8s").wow.animate__bounceInRight
+            img(src="../../images/letters/s.png" alt="S" data-wow-offset="150" data-wow-duration="1.2s").wow.animate__bounceInRight
+            img(src="../../images/letters/s-shadow.png" alt="S-shadow").strategy__shadow.strategy__shadow--s
 
         div(data-let="d" data-wow-offset="150" data-wow-duration="1.2s").strategy__letter.strategy__letter--d.cursor-on.dark-back
-            img(src="../../images/letters/d.png" alt="D" data-wow-offset="150" data-wow-duration="1.2s").wow.animate__bounceInRight
+            img(src="../../images/letters/d.png" alt="D" data-wow-offset="150" data-wow-duration="1.6s").wow.animate__bounceInRight
+            img(src="../../images/letters/d-shadow.png" alt="D-shadow").strategy__shadow.strategy__shadow--d
 
         div(data-let="a").strategy__letter.strategy__letter--a.cursor-on.dark-back
-            img(src="../../images/letters/a.png" alt="A" data-wow-offset="150" data-wow-duration="1.6s").wow.animate__bounceInRight
+            img(src="../../images/letters/a.png" alt="A" data-wow-offset="150" data-wow-duration="1.8s").wow.animate__bounceInRight
+            img(src="../../images/letters/a-shadow.png" alt="A-shadow").strategy__shadow.strategy__shadow--a
