@@ -7,3 +7,6 @@ import './cases-slider';
 import './team-slider';
 import './navigation';
 import './accordeon';
+import './modal-success';
+import './modal-sogl';
+import './parallax';

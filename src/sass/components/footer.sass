@@ -1,0 +1,110 @@
+.footer
+	max-width: 100%
+	background: var(--black-dop3-color)
+	color: var(--white-color)
+	font-family: 'Montserrat'
+
+	&__general
+		display: grid
+		grid-template-columns: 150px 480px 492px
+		grid-template-areas: "logo nav contacts"
+		justify-content: space-between
+		align-items: center
+		padding: 40px max(50vw - 800px, 20px)
+
+	&__logo
+		grid-area: logo
+		&:hover
+			opacity: .8
+
+	&__nav-list
+		display: flex
+		grid-column-gap: 60px
+		list-style: none
+		grid-area: nav
+
+	&__nav-item
+		font-weight: 500
+		font-size: 19.6779px
+		line-height: 24px
+
+		&:hover
+			opacity: .8
+
+	&__contacts
+		display: flex
+		grid-column-gap: 140px
+		font-weight: 400
+		font-size: 16px
+		line-height: 140%
+		letter-spacing: 0.005em
+		grid-area: contacts
+
+	&__tel
+		font-weight: 500
+		font-size: 18px
+		line-height: 140%
+		margin-bottom: 4px
+
+		&:hover
+			opacity: .8
+
+	&__dop
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		border-top: 1px solid var(--dark-gray-color)
+		padding: 30px max(50vw - 800px, 20px)
+		font-weight: 400
+		font-size: 14px
+		line-height: 140%
+		color: var(--dark2-gray-color)
+
+	&__amado
+		margin-left: 12px
+		cursor: pointer
+
+		&:hover
+			opacity: .8
+
+@media (max-width: 1280px)
+	.footer
+		&__general
+			grid-template-areas: "logo nav"	"contacts contacts"
+			grid-template-columns: 150px 1fr
+			grid-row-gap: 91px
+
+		&__nav-list
+			justify-content: flex-end
+
+		&__contacts
+			font-size: 20px
+			line-height: 140%
+
+		&__tel
+			font-size: 22px
+			line-height: 140%
+
+		&__dop
+			padding-bottom: 53px
+
+@media (max-width: 780px)
+	.footer
+		&__general
+			grid-template-areas: "logo" "nav"	"contacts"
+			grid-template-columns: 1fr
+			grid-row-gap: 51px
+			justify-items: center
+
+		&__nav-list
+			flex-direction: column
+			grid-row-gap: 12px
+			text-align: center
+
+		&__contacts
+			flex-direction: column
+			grid-row-gap: 23px
+			text-align: center
+
+		&__dop
+			padding: 20px max(50vw - 800px, 20px) 33px

@@ -1,0 +1,39 @@
+include ../mixins/buttons.pug
+form.form
+    fieldset.form__general
+        .form__item
+            input(type="text" name="name" id="name").form__input.cursor-on
+            .form__error-empty * Это поле обязательно для заполнения
+            .form__error-comment 
+            label(for="name").form__input-label.cursor-on Имя
+            .form__success 
+                include ../../images/svg/success.svg
+            .form__error 
+                include ../../images/svg/red-cross.svg
+        .form__item
+            input(type="text" name="phone" id="phone").form__input.cursor-on
+            .form__error-empty * Это поле обязательно для заполнения
+            .form__error-comment 
+            label(for="phone").form__input-label.cursor-on Телефон*
+            .form__success 
+                include ../../images/svg/success.svg
+            .form__error 
+                include ../../images/svg/red-cross.svg
+        .form__item
+            input(type="text" name="email" id="email").form__input.cursor-on
+            .form__error-empty * Это поле обязательно для заполнения
+            .form__error-comment 
+            label(for="email").form__input-label.cursor-on E-mail
+            .form__success 
+                include ../../images/svg/success.svg
+            .form__error 
+                include ../../images/svg/red-cross.svg
+        .form__submit 
+            +button('submit', 'none', 'Отправить заявку')
+    .form__checkbox 
+        input(type="checkbox", name="sogl", id="sogl").form__input-check
+        label(for="sogl").form__label-check.cursor-on
+            include ../../images/svg/white-cross.svg
+
+        span.form__checkbox-dop Ознакомлен(на) с <a class="form__checkbox-sogl">пользовательским соглашением</a>
+

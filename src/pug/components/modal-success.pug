@@ -1,0 +1,10 @@
+include ../mixins/buttons.pug
+.modal-wrapper 
+    .modal-success.white-back
+        a.modal-success__close.close-success-modal-js
+            include ../../images/svg/close-menu.svg
+        h3.modal-success__title Ваша заявка успешно отправлена!
+        h4 Здесь может быть дополнительный текст, до двух-трех строк.
+        .modal-success__btn.close-success-modal-js
+            +button('button', 'none', 'Ок')
+        

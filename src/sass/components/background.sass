@@ -1,0 +1,42 @@
+.main
+    overflow: hidden
+    position: relative
+
+    &__background
+        position: absolute
+        overflow: hidden
+        width: 100%
+        pointer-events: none
+        z-index: 0
+
+        &--desk
+            max-width: 100%
+
+        &--tablet
+            display: none
+            width: 96%
+            transform: translateX(20px)
+
+        &--mobile
+            display: none
+            width: 94%
+            transform: translateX(20px)
+
+@media (max-width: 1280px)
+    .main
+        &__background
+            &--desk
+                display: none
+
+            &--tablet
+                display: block
+
+@media (max-width: 780px)
+    .main
+        &__background
+
+            &--tablet
+                display: none
+
+            &--mobile
+                display: block

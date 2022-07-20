@@ -3,12 +3,12 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination])
 
 document.addEventListener('DOMContentLoaded', () => {
-  let sliderWrapper = document.querySelectorAll('.cases-slider')
+  const sliderWrapper = document.querySelectorAll('.cases-slider')
 
   sliderWrapper?.forEach(slider => {
     let container = slider.querySelector('.cases-swiper')
 
-    const swiper = new Swiper(container, {
+    let swiper = new Swiper(container, {
       slidesPerView: 1,
       spaceBetween: 18,
       allowTouchMove: true,
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    let navs = document.querySelectorAll('.cases__nav-item')
+    const navs = document.querySelectorAll('.cases__nav-item')
 
     navs?.forEach((nav) => {
       nav.addEventListener('click', () => {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
 
-    let allSlides = document.querySelectorAll('.cases-wrapper__slide')
+    const allSlides = document.querySelectorAll('.cases-wrapper__slide')
 
     allSlides?.forEach((slide) => {
       slide.addEventListener('click', () => {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })
 
-let clickBoxes = document.querySelectorAll('.cases-wrapper__slide')
+const clickBoxes = document.querySelectorAll('.cases-wrapper__slide')
 
 clickBoxes?.forEach((clickBox) => {
   let popup = clickBox.querySelector('.cases-wrapper__info')

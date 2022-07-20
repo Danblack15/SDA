@@ -1,0 +1,70 @@
+.back-dots
+	position: absolute
+	top: 0
+	width: 100%
+	user-select: none
+	pointer-events: none
+
+	&__dot
+		background: rgba(255, 255, 255, 0.38)
+		display: block
+		position: fixed
+		user-select: none
+		pointer-events: none
+		box-shadow: 0px 0px 7px rgba(255, 255, 255, 1)
+
+		&--blue
+			background: rgba(18, 40, 114, 0.38)
+			box-shadow: none
+
+		&--small
+			width: 4px
+			height: 4px
+
+		&--big
+			width: 8px
+			height: 8px
+
+		&:nth-child(1)
+			left: 20%
+			top: 20%
+
+		&:nth-child(2)
+			left: 55%
+			top: 40%
+
+		&:nth-child(3)
+			left: 75%
+			top: 10%
+
+		&:nth-child(4)
+			left: 85%
+			top: 60%
+
+		&:nth-child(5)
+			left: 35%
+			top: 5%
+
+		&:nth-child(6)
+			left: 5%
+			top: 50%
+
+		&:nth-child(7)
+			left: 40%
+			top: 60%
+
+		&:nth-child(8)
+			left: 90%
+			top: 33%
+
+		&:nth-child(9)
+			left: 86%
+			top: -10%
+
+		&:nth-child(10)
+			left: 26%
+			top: -15%
+
+@media (max-width: 780px)
+	.back-dots
+		display: none

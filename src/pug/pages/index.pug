@@ -7,14 +7,30 @@ head
 	title Document
 
 body
+	include ../components/modal-success.pug
+
+	include ../components/modal-sogl.pug
+
 	include ../components/header.pug
 
-	include ../components/services.pug
+	.main
+		.main__background
+			img(src="/images/line-desk.png", alt="desk-back").main__background--desk
+			img(src="/images/line-desk-tablet.png", alt="desk-back").main__background--tablet
+			img(src="/images/line-desk-mobile.png", alt="desk-back").main__background--mobile
 
-	include ../components/strategy.pug
+		include ../components/services.pug
 
-	include ../components/cases.pug
+		include ../components/strategy.pug
 
-	include ../components/team.pug
+		include ../components/cases.pug
+
+		include ../components/team.pug
+
+	include ../components/contacts.pug
+
+	include ../components/footer.pug
 
 	include ../components/cursor.pug
+
+	include ../components/back-dots.pug

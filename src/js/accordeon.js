@@ -1,7 +1,7 @@
-let accordeons = document.querySelectorAll('.accordeon-wrapper')
+const accordeons = document.querySelectorAll('.accordeon-wrapper')
 
 accordeons?.forEach((accordeon) => {
-  let titles = accordeon.querySelectorAll('.accordeon-clickBox')
+  const titles = accordeon.querySelectorAll('.accordeon-clickBox')
 
   titles?.forEach((title) => {
     title.addEventListener('click', (e) => {
@@ -19,17 +19,17 @@ accordeons?.forEach((accordeon) => {
         }, 400)
 
       } else {
-        let dopLists = accordeon.querySelectorAll('.accordeon-dopList')
+        const lists = accordeon.querySelectorAll('.accordeon-dopList')
 
-        dopLists?.forEach((dopList) => {
-          dopList.style.maxHeight = 0
-          dopList.classList.remove('accordeon-dopList--active')
+        lists?.forEach((list) => {
+          list.style.maxHeight = 0
+          list.classList.remove('accordeon-dopList--active')
 
-          if (dopList.parentElement.querySelector('svg').classList.contains('active-arrow')) {
-            dopList.parentElement.querySelector('svg').classList.add('not-active-arrow')
+          if (list.parentElement.querySelector('svg').classList.contains('active-arrow')) {
+            list.parentElement.querySelector('svg').classList.add('not-active-arrow')
             setTimeout(() => {
-              dopList.parentElement.querySelector('svg').classList.remove('active-arrow')
-              dopList.parentElement.querySelector('svg').classList.remove('not-active-arrow')
+              list.parentElement.querySelector('svg').classList.remove('active-arrow')
+              list.parentElement.querySelector('svg').classList.remove('not-active-arrow')
             }, 400)
           }
         })

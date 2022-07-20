@@ -1,6 +1,16 @@
 let modal = document.querySelector('.modal-back')
 
-window.addEventListener('mousemove', e => {
+function closeModalFun(modalWrapper, modal) {
+  modalWrapper.classList.remove('modal-menu--opened')
+  modalWrapper.classList.add('modal-menu--closed')
+  setTimeout(() => {
+    modal.classList.remove('modal-back--opened')
+    modalWrapper.classList.remove('modal-menu--closed')
+    document.body.style.overflowY = 'auto'
+  }, 400)
+}
+
+window.addEventListener('resize', e => {
   if (window.innerWidth <= 1280 && modal) {
 
     let openModal = document.querySelector('.header-nav__open-modal'),
@@ -25,7 +35,7 @@ window.addEventListener('mousemove', e => {
       }
     })
 
-    let navItems = document.querySelectorAll('.modal-menu__item ')
+    const navItems = document.querySelectorAll('.modal-menu__item ')
 
     navItems?.forEach((nav) => {
       nav.addEventListener('click', () => {
@@ -38,13 +48,3 @@ window.addEventListener('mousemove', e => {
     document.body.style.overflowY = 'auto'
   }
 })
-
-function closeModalFun(modalWrapper, modal) {
-  modalWrapper.classList.remove('modal-menu--opened')
-  modalWrapper.classList.add('modal-menu--closed')
-  setTimeout(() => {
-    modal.classList.remove('modal-back--opened')
-    modalWrapper.classList.remove('modal-menu--closed')
-    document.body.style.overflowY = 'auto'
-  }, 400)
-}

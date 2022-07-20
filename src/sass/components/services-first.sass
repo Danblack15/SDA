@@ -6,6 +6,7 @@
     border: 1px solid var(--silver-color)
     position: relative
     overflow: hidden
+    z-index: 999
 
     &__click-box
         height: inherit
@@ -14,6 +15,7 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        cursor: pointer
 
     &__img
         margin-left: 33px
@@ -26,6 +28,7 @@
         line-height: 140%
         letter-spacing: 0.005em
         color: var(--black-dop-color)
+        font-family: 'Ubuntu'
         transition: .4s color
 
     &__box-arrow
@@ -133,6 +136,8 @@
         top: 12px
         right: 12px
         cursor: pointer
+        &:hover
+            opacity: .8
         & path
             fill: white
 
@@ -140,6 +145,8 @@
         font-weight: 700
         font-size: 20px
         line-height: 180%
+        &:hover
+            opacity: .8
         & p
             display: inline
             & svg

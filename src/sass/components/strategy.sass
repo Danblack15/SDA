@@ -4,10 +4,6 @@
 	justify-content: space-between
 	min-height: 545px
 
-	& *
-		padding: 0
-		margin: 0
-
 	&__info
 		width: 455px
 		position: relative
@@ -15,6 +11,7 @@
 	&__info-item
 		display: none
 		position: absolute
+		color: var(--black-dop4-color)
 		&--active
 			display: block
 			animation-name: active-tab
@@ -73,6 +70,7 @@
 	&__text-title
 		display: inline-flex
 		align-content: flex-start
+		color: var(--black-dop4-color)
 		cursor: pointer
 
 		& p
@@ -96,10 +94,7 @@
 			max-width: 14px
 			height: 25px
 			margin-right: 10px
-			transform: rotate(180deg)
 			transition: .6s transform
-		&--active svg
-			transform: rotate(270deg)
 
 	&__dop
 		font-family: 'Ubuntu'
@@ -129,6 +124,7 @@
 		transition: .7s
 		height: 360px
 		cursor: pointer
+		z-index: 999
 
 		& img
 			max-height: 100%

@@ -2,7 +2,7 @@ mixin button(type, link, name)
 		if type=='href'
 			a(href=link).button
 				span=name
-		else if type=submit 
+		else if type='submit' 
 			button(type="submit").button
 				span=name
 		else 

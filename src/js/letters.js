@@ -7,7 +7,21 @@ window.wow = new WOW({
 
 window.wow.init()
 
-let timeLetter = setInterval(interval, 5000)
+function deleteAllActiveInfo() {
+	const allInfoBlocks = document.querySelectorAll('.strategy__info-item')
+
+	allInfoBlocks?.forEach((block) => {
+		block.classList.remove('strategy__info-item--active')
+	})
+}
+
+function deleteAllActiveLetters() {
+	const letters = document.querySelectorAll('.strategy__letter')
+
+	letters?.forEach((letter) => {
+		letter.classList.remove('strategy__letter--active')
+	})
+}
 
 function interval() {
 	let activeLet = document.querySelector('.strategy__letter--active'),
@@ -41,7 +55,7 @@ function interval() {
 }
 
 
-let letters = document.querySelectorAll('.strategy__letter')
+const letters = document.querySelectorAll('.strategy__letter')
 
 letters?.forEach((letter) => {
 	letter.addEventListener('click', () => {
@@ -63,25 +77,9 @@ letters?.forEach((letter) => {
 	})
 })
 
-function deleteAllActiveInfo() {
-	let allInfoBlocks = document.querySelectorAll('.strategy__info-item')
-
-	allInfoBlocks?.forEach((block) => {
-		block.classList.remove('strategy__info-item--active')
-	})
-}
-
-function deleteAllActiveLetters() {
-	let letters = document.querySelectorAll('.strategy__letter')
-
-	letters?.forEach((letter) => {
-		letter.classList.remove('strategy__letter--active')
-	})
-}
-
 
 //media popup
-let clickBoxes = document.querySelectorAll('.strategy__title-wrapper')
+const clickBoxes = document.querySelectorAll('.strategy__title-wrapper')
 
 clickBoxes?.forEach((clickBox) => {
 	clickBox.addEventListener('click', () => {
@@ -98,3 +96,5 @@ clickBoxes?.forEach((clickBox) => {
 		}
 	})
 })
+
+let timeLetter = setInterval(interval, 5000)
